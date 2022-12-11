@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+#slider {
+    margin: 0 auto;
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  #slider input[type=radio] {
+    display: none;
+  }
+  
+  #slider label {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  h2 {
+    font-size: 36px;
+  }
+
+  #slides {
+    padding: 10px;
+    background: inherit;
+    position: relative;
+    z-index: 1;
+  }
+  #overflow {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  #slide1:checked ~ #slides .inner{
+    margin-left: 0;
+  }
+  #slide2:checked ~ #slides .inner{
+    margin-left: -100%;
+  }
+  #slide3:checked ~ #slides .inner{
+    margin-left: -200%;
+  }
+  #slide4:checked ~ #slides .inner{
+    margin-left: -300%;
+  }
+  #slide5:checked ~ #slides .inner{
+    margin-left: -400%;
+  }
+  #slide6:checked ~ #slides .inner{
+    margin-left: -500%;
+  }
+  
+  #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.0770, 0.000, 0.175, 1.000);
+    width: 600%;
+    line-height: 0;
+    height: 500px;
+  } 
+  
+  #slides .slide {
+    width: 16.665%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+  }
+  
+  #slides .slide_1{
+    background: url("../images/slide-music.png");
+    border-radius: 20%;
+    box-shadow: 2px 2px 5px 2px #0d0e10 inset;
+  }
+  #slides .slide_2{
+    background: url("../images/slide-drama.png");
+    border-radius: 20%;
+    box-shadow: 2px 2px 5px 2px #0d0e10 inset;
+  }
+  #slides .slide_3{
+    background: url("../images/slide-lang.png");
+    border-radius: 20%;
+    box-shadow: 2px 2px 5px 2px #0d0e10 inset;
+  }
+  #slides .slide_4{
+    background: url("../images/slide-tech.png");
+    border-radius: 20%;
+    box-shadow: 2px 2px 5px 2px #0d0e10 inset;
+  }
+  #slides .slide_5{
+    background: url("../images/slide-food.png");
+    border-radius: 20%;
+    box-shadow: 2px 2px 5px 2px #0d0e10 inset;
+  }
+  #slides .slide_6{
+    background: url("../images/slide-game.png");
+    border-radius: 20%;
+    box-shadow: 2px 2px 5px 2px #0d0e10 inset;
+  }
+  
+  .slide-content {
+    padding: 10px;
+    border : 3px solid #fff;
+    border-radius: 20%;
+    width: fit-content;
+    height: 50px;
+  }
+
+  .slide-content :hover {
+    color: rgb(3, 209, 255);
+  }
+  
+  #controls {
+    margin: -300px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+  }
+  #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+  }
+ 
+  #controls label:hover {
+    opacity: 1;
+  }
+  
+  #bullets {
+    margin: 300px 0 0;
+    text-align: center;
+  }
+  #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+  }
+  
+  #slide1:checked ~ #bullets label:nth-child(1),
+  #slide2:checked ~ #bullets label:nth-child(2),
+  #slide3:checked ~ #bullets label:nth-child(3),
+  #slide4:checked ~ #bullets label:nth-child(4),
+  #slide5:checked ~ #bullets label:nth-child(5),
+  #slide6:checked ~ #bullets label:nth-child(6)
+  {
+    background: rgb(3, 209, 255);
+  }
+
+
+  #slide1:checked ~ #controls label:nth-child(2)
+  {
+    background: url("../images/slide-drama.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: right;
+    margin: -150px -300px 0 0;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide2:checked ~ #controls label:nth-child(3)
+  {
+    background: url("../images/slide-lang.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: right;
+    margin: -150px -300px 0 0;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide3:checked ~ #controls label:nth-child(4)
+  {
+    background: url("../images/slide-tech.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: right;
+    margin: -150px -300px 0 0;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide4:checked ~ #controls label:nth-child(5)
+  {
+    background: url("../images/slide-food.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: right;
+    margin: -150px -300px 0 0;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide5:checked ~ #controls label:nth-child(6)
+  {
+    background: url("../images/slide-game.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: right;
+    margin: -150px -300px 0 0;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide6:checked ~ #controls label:nth-child(1)
+  {
+    background: url("../images/slide-music.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: right;
+    margin: -150px -300px 0 0;
+    z-index : -1;
+    display: block;
+  }
+
+
+
+  #slide1:checked ~ #controls label:nth-child(6)
+  {
+    background: url("../images/slide-game.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: left;
+    margin: -150px 0 0 -300px;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide2:checked ~ #controls label:nth-child(1)
+  {
+    background: url("../images/slide-music.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: left;
+    margin: -150px 0 0 -300px;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide3:checked ~ #controls label:nth-child(2)
+  {
+    background: url("../images/slide-drama.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: left;
+    margin: -150px 0 0 -300px;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide4:checked ~ #controls label:nth-child(3)
+  {
+    background: url("../images/slide-lang.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: left;
+    margin: -150px 0 0 -300px;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide5:checked ~ #controls label:nth-child(4)
+  {
+    background: url("../images/slide-tech.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: left;
+    margin: -150px 0 0 -300px;
+    z-index : -1;
+    display: block;
+  }
+
+  #slide6:checked ~ #controls label:nth-child(5)
+  {
+    background: url("../images/slide-food.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20%;
+    float: left;
+    margin: -150px 0 0 -300px;
+    z-index : -1;
+    display: block;
+  }

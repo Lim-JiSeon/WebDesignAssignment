@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-wrap,
+.about-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 750px;
+    margin: 20px 5px 10px 5px;
+    padding : 0 4%;
+}
+
+.intro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-top: 150px;
+}
+
+.intro h1 {
+    font-size: 35px;
+}
+
+.intro img {
+    width: 200px;
+    height: 200px;
+}
+
+.about-content {
+    width: 100%;
+    float : right;
+}
+
+.about-content h3 {
+    font-size: 36px;
+}
+
+.about-content p {
+    font-size: 18px;
+    text-align: left;
+}
